@@ -6,7 +6,7 @@
         
         DataContext="{StaticResource MainWindow}"
         
-        Title="{Binding TrackDetails.Title}"
+        Title="{Binding TrackDetails.Title}" Icon="app_icon.ico"
         >
 
     <Grid>

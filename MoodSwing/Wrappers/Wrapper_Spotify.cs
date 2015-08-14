@@ -116,9 +116,18 @@ namespace MoodSwing.Wrappers
             {
                 if (_Current_Status.track != null)
                 {
-                    ret.Title = _Current_Status.track.track_resource.name;
-                    ret.Artist = _Current_Status.track.artist_resource.name;
-                    ret.Album = _Current_Status.track.album_resource.name;
+                    if (_Current_Status.track.track_type != "ad")
+                    {
+                        ret.Title = _Current_Status.track.track_resource.name;
+                        ret.Artist = _Current_Status.track.artist_resource.name;
+                        ret.Album = _Current_Status.track.album_resource.name;
+                    }
+                    else
+                    {
+                        ret.Title = "Playing Ad";
+                        ret.Artist = null;
+                        ret.Album = null;
+                    }
                 }
                 else
                 {

@@ -5,6 +5,8 @@
  */
 
 using SKYPE4COMLib;
+using System;
+using System.Diagnostics;
 
 namespace MoodSwing.Wrappers
 {
@@ -39,7 +41,14 @@ namespace MoodSwing.Wrappers
         {
             if (_skype == null) Init();
 
-            _skype.CurrentUserProfile.MoodText = mood;
+            try
+            {
+                _skype.CurrentUserProfile.MoodText = mood;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message + "\r\n" + ex.StackTrace);
+            }
         }
 
         public static void Dispose()

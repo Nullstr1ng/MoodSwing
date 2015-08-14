@@ -13,6 +13,7 @@ using System.Windows.Input;
 using MoodSwing.Effects;
 using MoodSwing.Model;
 using MoodSwing.Wrappers;
+using System.Diagnostics;
 
 namespace MoodSwing.ViewModel
 {
@@ -75,20 +76,26 @@ namespace MoodSwing.ViewModel
         {
             if (!DesignerProperties.GetIsInDesignMode(Application.Current.MainWindow))
             {
-                Updater.I.Start();
-                StatusEffects.I.Start();
-
-                Wrapper_Skype.Init();
-
                 this.TrackDetails.Title = "Initializing Spotify ...";
-                Wrapper_Spotify.Init();
+                if (Wrapper_Spotify.Init())
+                {
+                    Wrapper_Skype.Init();
 
-                Wrapper_Spotify.TrackChanged += Wrapper_Spotify_TrackChanged;
+                    Updater.I.Start();
+                    StatusEffects.I.Start();
 
-                Command_Update = new RelayCommand(Commnad_Update_Click);
+                    Wrapper_Spotify.TrackChanged += Wrapper_Spotify_TrackChanged;
 
-                this.Pattern = Properties.Settings.Default.Pattern;
-                this.SelectedEffect = Properties.Settings.Default.SelectedEffect;
+                    Command_Update = new RelayCommand(Commnad_Update_Click);
+
+                    this.Pattern = Properties.Settings.Default.Pattern;
+                    this.SelectedEffect = Properties.Settings.Default.SelectedEffect;
+                }
+                else
+                {
+                    this.TrackDetails.Title = "Make sure you're running Spotify. Please restart this app";
+                    Process.GetCurrentProcess().Kill();
+                }
             }
         }
         #endregion

@@ -11,8 +11,8 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -46,10 +46,11 @@
                         <ComboBoxItem Content="Static" Selector.IsSelected="True" />
                         <ComboBoxItem Content="Scroll" />
                         <ComboBoxItem Content="Dancer" />
+                        <ComboBoxItem Content="Dance Notes" />
                     </ComboBox>
                     <TextBlock Text=" " />
                     <TextBlock Text="Pattern" />
-                    <TextBox Text="{Binding Pattern, FallbackValue=%artist%-%title%-%album%}" FontSize="20"/>
+                    <TextBox Text="{Binding Pattern, FallbackValue=%artist%-%title%-%album%, Mode=TwoWay}" FontSize="20"/>
                     <TextBlock Text=" " />
                     <StackPanel Orientation="Horizontal">
                         <Button Content=" Update " FontSize="20" Command="{Binding Command_Update}" />

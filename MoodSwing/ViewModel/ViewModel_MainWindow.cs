@@ -124,6 +124,7 @@ namespace MoodSwing.ViewModel
 
             if (save)
             {
+                Properties.Settings.Default.SelectedEffect = this.SelectedEffect;
                 Properties.Settings.Default.Pattern = this.Pattern;
                 Properties.Settings.Default.Save();
             }

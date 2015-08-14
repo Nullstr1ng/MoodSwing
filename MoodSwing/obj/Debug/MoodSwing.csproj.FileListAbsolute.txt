@@ -18,3 +18,4 @@ D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.Properties.Resources.res
 D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.csproj.GenerateResource.Cache
 D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.exe
 D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.pdb
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.csprojResolveAssemblyReference.cache

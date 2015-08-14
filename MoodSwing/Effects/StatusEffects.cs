@@ -22,7 +22,7 @@ namespace MoodSwing.Effects
             }
         }
 
-        private int _TimerDuration = 2500;
+        private int _TimerDuration = 7000;
         public int TimerDuration
         {
             get { return _TimerDuration; }
@@ -61,6 +61,9 @@ namespace MoodSwing.Effects
                 case 2: // DANCER
                     Dancer();
                     break;
+                case 3: // NOTES DANCE
+                    DanceNotes();
+                    break;
             }
         }
 
@@ -71,8 +74,7 @@ namespace MoodSwing.Effects
 
         public void UpdateEffect(int type)
         {
-            scroll_index = 0;
-            dancer_index = 0;
+            anim_index = 0;
 
             this._type = type;
         }
@@ -82,30 +84,42 @@ namespace MoodSwing.Effects
             this.Status = status;
         }
 
-        int scroll_index = 0;
+        int anim_index = 0;
         public void Scroll()
         {
             string new_stat = string.Empty;
 
-            new_stat = this.Status.Substring(this.scroll_index) + this.Status.Substring(0, this.scroll_index);
+            new_stat = this.Status.Substring(this.anim_index) + this.Status.Substring(0, this.anim_index);
             Updater.I.EnQ(new_stat, 1);
 
-            this.scroll_index++;
-            if (scroll_index >= this.Status.Length) scroll_index = 0;
+            this.anim_index++;
+            if (anim_index >= this.Status.Length) anim_index = 0;
         }
 
-        int dancer_index = 0;
         string[] dancer_array = {
                                     "♫ (>'-')>", "<('-'<) ♫", "♪ ^(' - ')^ ♫"
                                 };
         public void Dancer()
         {
-            if (dancer_index >= dancer_array.Length) dancer_index = 0;
+            if (anim_index >= dancer_array.Length) anim_index = 0;
 
-            Updater.I.EnQ(dancer_array[dancer_index] + " " + this.Status, 1);
+            Updater.I.EnQ(dancer_array[anim_index] + " " + this.Status, 1);
 
-            dancer_index++;
+            anim_index++;
             
+        }
+
+        string[] notes_array = {
+                                    "♪_", "♫", "_♪", "..", "♫♫", "♫♪", "♪♪"
+                                };
+        public void DanceNotes()
+        {
+            if (anim_index >= notes_array.Length) anim_index = 0;
+
+            Updater.I.EnQ(notes_array[anim_index] + " " + this.Status, 1);
+
+            anim_index++;
+
         }
     }
 }

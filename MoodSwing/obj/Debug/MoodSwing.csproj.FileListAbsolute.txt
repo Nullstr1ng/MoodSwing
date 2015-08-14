@@ -1,0 +1,20 @@
+C:\Users\Jayson\AppData\Local\Temporary Projects\MoodSwing\bin\Debug\MoodSwing.exe.config
+D:\Projects\WPF\MoodSwing\MoodSwing\bin\Debug\MoodSwing.exe.config
+D:\Projects\WPF\MoodSwing\MoodSwing\bin\Debug\MoodSwing.exe
+D:\Projects\WPF\MoodSwing\MoodSwing\bin\Debug\MoodSwing.pdb
+D:\Projects\WPF\MoodSwing\MoodSwing\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\WPF\MoodSwing\MoodSwing\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.csproj.ResolveComReference.cache
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MainWindow.baml
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MainWindow.g.cs
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\App.g.cs
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing_MarkupCompile.cache
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing_MarkupCompile.lref
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\App.baml
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.g.resources
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.Properties.Resources.resources
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.csproj.GenerateResource.Cache
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.exe
+D:\Projects\WPF\MoodSwing\MoodSwing\obj\Debug\MoodSwing.pdb

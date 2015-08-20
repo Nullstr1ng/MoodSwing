@@ -69,6 +69,8 @@ namespace MoodSwing.ViewModel
 
         #region commands
         public ICommand Command_Update { get; internal set; }
+        public ICommand Command_About { get; internal set; }
+        public ICommand Command_Quite { get; internal set; }
         #endregion
 
         #region ctor
@@ -83,6 +85,10 @@ namespace MoodSwing.ViewModel
 
                     Updater.I.Start();
                     StatusEffects.I.Start();
+
+                    NameEffect.I.Start();
+                    NameEffect.I.UpdateEffect(2);
+                    NameEffect.I.UpdateTrackDetails("Jayson Ragasa ");
 
                     Wrapper_Spotify.TrackChanged += Wrapper_Spotify_TrackChanged;
 

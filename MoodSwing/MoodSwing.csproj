@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Effects\NameEffect.cs" />
     <Compile Include="Effects\StatusEffects.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Model\Model_TrackDetails.cs" />

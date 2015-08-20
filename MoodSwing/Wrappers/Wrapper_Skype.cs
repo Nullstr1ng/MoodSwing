@@ -51,6 +51,20 @@ namespace MoodSwing.Wrappers
             }
         }
 
+        public static void ChangeName(string name)
+        {
+            if (_skype == null) Init();
+
+            try
+            {
+                _skype.CurrentUserProfile.FullName = name;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message + "\r\n" + ex.StackTrace);
+            }
+        }
+
         public static void Dispose()
         {
             _skype = null;

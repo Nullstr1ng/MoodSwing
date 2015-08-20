@@ -4,6 +4,7 @@
  * date: Aug. 14, 2015
  */
 
+using System;
 using System.Collections;
 using System.ComponentModel;
 
@@ -59,10 +60,21 @@ namespace MoodSwing
                 {
                     string dq = (string)this._q.Dequeue();
 
-                    switch ((int)e.Argument)
+                    int update_section = 1;
+
+                    if(dq.Contains("|"))
+                    {
+                        update_section = Convert.ToInt16(dq.Substring(dq.IndexOf("|") + 1));
+                    }
+
+                    switch (update_section)
                     {
                         case 1:
                             Wrappers.Wrapper_Skype.ChangeMood(dq);
+
+                            break;
+                        case 2:
+                            Wrappers.Wrapper_Skype.ChangeName(dq.Substring(0, dq.IndexOf("|")));
                             break;
                     }
                 }

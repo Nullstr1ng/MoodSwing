@@ -18,3 +18,6 @@ D:\jayson_r\code_reps\MoodSwing\obj\Debug\MoodSwing.Properties.Resources.resourc
 D:\jayson_r\code_reps\MoodSwing\obj\Debug\MoodSwing.csproj.GenerateResource.Cache
 D:\jayson_r\code_reps\MoodSwing\obj\Debug\MoodSwing.exe
 D:\jayson_r\code_reps\MoodSwing\obj\Debug\MoodSwing.pdb
+C:\Users\jaysonragasa-pc\Codes\MoodSwing\MoodSwing\bin\Debug\MoodSwing.exe.config
+C:\Users\jaysonragasa-pc\Codes\MoodSwing\MoodSwing\obj\Debug\Interop.SKYPE4COMLib.dll
+C:\Users\jaysonragasa-pc\Codes\MoodSwing\MoodSwing\obj\Debug\MoodSwing.csproj.ResolveComReference.cache

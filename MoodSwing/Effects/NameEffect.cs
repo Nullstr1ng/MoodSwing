@@ -1,6 +1,4 @@
 ﻿using System.Timers;
-using MoodSwing.Model;
-using MoodSwing.Wrappers;
 
 namespace MoodSwing.Effects
 {
